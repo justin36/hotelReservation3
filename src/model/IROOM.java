@@ -8,4 +8,5 @@ public interface IROOM{
     public RoomType getRoomType();
 
     public boolean isFree();
+
 }

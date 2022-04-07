@@ -1,6 +1,10 @@
 package model;
 
 public class Room implements IROOM{
+    String roomNumber;
+    Double price;
+    RoomType enumeration;
+
     @Override
     public String getRoomNumber() {
         return null;
@@ -19,5 +23,14 @@ public class Room implements IROOM{
     @Override
     public boolean isFree() {
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "roomNumber='" + roomNumber + '\'' +
+                ", price=" + price +
+                ", enumeration=" + enumeration +
+                '}';
     }
 }
