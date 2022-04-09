@@ -1,6 +1,6 @@
 package model;
 
-public class Room implements IROOM{
+public class Room implements IRoom {
     String roomNumber;
     Double price;
     RoomType enumeration;
