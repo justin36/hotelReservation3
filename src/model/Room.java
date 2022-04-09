@@ -5,24 +5,21 @@ public class Room implements IROOM{
     Double price;
     RoomType enumeration;
 
-    @Override
+
     public String getRoomNumber() {
-        return null;
+        return this.getRoomNumber();
     }
 
-    @Override
-    public Double getRoomPrice() {
-        return null;
+    public double getRoomPrice() {
+        return this.getRoomPrice();
     }
 
-    @Override
     public RoomType getRoomType() {
-        return null;
+        return this.getRoomType();
     }
 
-    @Override
     public boolean isFree() {
-        return false;
+        return this.isFree();
     }
 
     @Override
