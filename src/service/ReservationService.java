@@ -12,7 +12,7 @@ public class ReservationService {
     Map<String, Room> rooms = new HashMap<>();
 
     public void addRoom(IRoom room) {
-
+        rooms.put(room.getRoomNumber(), new Room(room.getRoomNumber(), room.getRoomPrice(), room.getRoomType()));
     }
 
     public IRoom getARoom(String roomId) {
