@@ -8,19 +8,29 @@ import java.util.Map;
 
 public class CustomerService {
 
-    Map<String, Customer> customers = new HashMap<>();
+    static HashMap<String, Customer> customers = new HashMap<String, Customer>();
 
-
-    public void addCustomer(String email, String firstName, String lastName) {
+    public static void addCustomer(String email, String firstName, String lastName) {
         customers.put(email, new Customer(firstName, lastName, email));
     }
 
-    public Customer getCustomer(String customerEmail) {
+    public static Customer getCustomer(String customerEmail) {
         return customers.get(customerEmail);
     }
 
-    public Collection<Customer> getAllCustomers() {
+    public static Collection<Customer> getAllCustomers() {
         return customers.values();
     }
 
+//    public static void main(String[] args) {
+//        addCustomer("justinkim36@naver.com", "Joon", "Kim");
+//
+//        System.out.println(customers);
+//
+//        System.out.println(getCustomer("justinkim36@naver.com"));
+//
+//        System.out.println("-----");
+//
+//        System.out.println(getAllCustomers());
+//    }
 }
