@@ -1,10 +1,8 @@
 package service;
 
-import model.Customer;
-import model.IRoom;
-import model.Reservation;
-import model.Room;
+import model.*;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class ReservationService {
@@ -15,22 +13,45 @@ public class ReservationService {
         rooms.put(room.getRoomNumber(), room);
     }
 
-    public IRoom getARoom(String roomNumber) {
-        return rooms.get(roomNumber);
+//    public IRoom getARoom(String roomNumber) {
+//        return rooms.get(roomNumber);
+//    }
+
+    public Collection<IRoom> findRooms(Date checkInDate, Date checkOutDate) {
+
+
+
+
+        return null;
     }
 
-    public Collection<IRoom> getAllRooms() {
-        return rooms.values();
+    public Collection<Reservation> getCustomersReservation(Customer customer) {
+        Collection<Reservation> customerReservation_HashSet = new HashSet<>();
+
+
+        return
+
     }
 
-    public Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
+    public static Reservation reserveARoom(Customer customer, IRoom room, Date checkInDate, Date checkOutDate) {
         Reservation reservation = new Reservation(customer, room, checkInDate, checkOutDate);
 
         return reservation;
     }
 
-    public static void main(String[] args) {
-        reserveARoom("A", 101, 01/01/22, 03/01/22);
+
+
+//    public static void main(String[] args) {
+//        Customer joon = new Customer("Joon", "Kim", "pauluskim0306@gmail.com");
+//
+//        Room room = new Room("101", 0.0, RoomType.SINGLE);
+////        Date startDate = new SimpleDateFormat("MM-dd-yy").parse("10-22-22");
+////        Date endDate = new SimpleDateFormat("MM-dd-yy").parse("10-23-22");
+//
+//        Reservation reser = reserveARoom(joon, room, new Date(2022,04,15), new Date(2022, 04,16));
+//
+//        System.out.println(reser);
+
 
     }
 
