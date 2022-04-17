@@ -2,35 +2,40 @@ package service;
 
 import model.Customer;
 
+import java.awt.color.ICC_ColorSpace;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 public class CustomerService {
 
-    static HashMap<String, Customer> customers = new HashMap<String, Customer>();
+    static HashMap<String, Customer> mapOfCustomers = new HashMap<String, Customer>();
 
-    public static void addCustomer(String email, String firstName, String lastName) {
-        customers.put(email, new Customer(firstName, lastName, email));
+    public static void addCustomer(Map<String, Customer> map, Customer customer) {
+        map.put(customer.getEmail(), customer);
     }
 
     public static Customer getCustomer(String customerEmail) {
-        return customers.get(customerEmail);
+        return mapOfCustomers.get(customerEmail);
     }
 
     public static Collection<Customer> getAllCustomers() {
-        return customers.values();
+        return mapOfCustomers.values();
     }
 
 //    public static void main(String[] args) {
-//        addCustomer("justinkim36@naver.com", "Joon", "Kim");
+//        Customer joon = new Customer("Joon", "Kim", "justinkim36@naver.com");
 //
-//        System.out.println(customers);
+//        ArrayList<Customer> customer = new ArrayList<Customer>();
+//        customer.add(joon);
+//
+//        for (Customer c : customer) {
+//            CustomerService.addCustomer(mapOfCustomers, c);
+//        }
 //
 //        System.out.println(getCustomer("justinkim36@naver.com"));
 //
-//        System.out.println("-----");
-//
 //        System.out.println(getAllCustomers());
-//    } I think this will take a long time. But let me think of a way how I could leverage the skills.
+//    }
 }
